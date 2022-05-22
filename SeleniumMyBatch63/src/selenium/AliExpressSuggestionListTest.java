@@ -41,7 +41,7 @@ public class AliExpressSuggestionListTest {
 		driver.findElement(By.className("search-key")).sendKeys("Canada");
 		Thread.sleep(2000);
 		//size - 10
-		List<WebElement> ali = driver.findElements(By.xpath("//div[@class='ui-autocomplete']//"));
+		List<WebElement> ali = driver.findElements(By.className("ui-autocomplete"));
 		System.out.println(ali.size());
 		
 		//print text
