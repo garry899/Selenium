@@ -5,16 +5,15 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 
-public class AliExpressSuggestionListTest {
+public class AliExpressHoverTest {
 
 	public static void main(String[] args) throws InterruptedException {
-
+		
 		System.setProperty("webdriver.gecko.driver", "/Users/gurindersingh/Selenium/SeleniumJars/geckodriver");
 		FirefoxDriver driver = new FirefoxDriver();
 		driver.get("https://www.aliexpress.com/");
-
-		Thread.sleep(2000);
 
 		List<WebElement> popUp1 = driver.findElements(By.className("btn-close"));
 		//System.out.println(popUp1.size());
@@ -37,23 +36,22 @@ public class AliExpressSuggestionListTest {
 			popUp3.get(0).click();
 		}
 		
-		//type Canada
-		driver.findElement(By.className("search-key")).sendKeys("Canada");
 		Thread.sleep(2000);
-		//size - 10
-		List<WebElement> ali = driver.findElements(By.className("ui-autocomplete-item"));
-		System.out.println(ali.size());
 		
-		//print text
+		WebElement fashion = driver.findElement(By.linkText("Women's Fashion"));
+		Actions builder = new Actions(driver);
+		builder.moveToElement(fashion).build().perform();//to hover mouse to element
+		Thread.sleep(2000);
 		
-		 for(int i=0;i<ali.size();i++) {
-		 System.out.println(ali.get(i).getText()); 
-		 }
-		 
+		List<WebElement> subElements = driver.findElements(By.xpath("(//dl[@class='sub-cate-items']/dd)[1]/a"));
+		System.out.println(subElements.size());
 		
-		/*
-		 * for(WebElement a :ali) { System.out.println(a.getText()); }
-		 */
+		for(WebElement a :subElements) { 
+			System.out.println(a.getText()); 
+			}
+		// Hover on women fashion
+		//size an text of women fashion 10 items
+
 	}
 
 }
