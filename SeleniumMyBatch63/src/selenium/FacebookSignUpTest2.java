@@ -23,17 +23,16 @@ public class FacebookSignUpTest2 {
 		driver.findElement(By.id("password_step_input")).sendKeys("sfdsf2");
 		driver.findElement(By.xpath("//select[@name='birthday_month']")).click();
 		
-		WebElement dropdownmnth = driver.findElement(By.xpath("//select[@name='birthday_month']"));
+		//WebElement dropdownmnth = driver.findElement(By.xpath("//select[@name='birthday_month']"));
+		WebElement dropdownmnth = driver.findElement(By.id("month"));
 		Select s = new Select(dropdownmnth);
 		s.selectByIndex(0);
 		
-		
-		driver.findElement(By.xpath("//select[@name='birthday_day']")).click();
-		WebElement dropdownday = driver.findElement(By.xpath("//select[@name='birthday_day']"));
+		//WebElement dropdownday = driver.findElement(By.xpath("//select[@name='birthday_day']"));
+		WebElement dropdownday = driver.findElement(By.id("day"));
 		Select l = new Select(dropdownday);
 		l.selectByIndex(8);
 		
-		driver.findElement(By.xpath("//select[@name='birthday_year']")).click();
 		WebElement dropdownyear = driver.findElement(By.xpath("//select[@name='birthday_year']"));
 		Select y = new Select(dropdownyear);
 		y.selectByValue("1993");

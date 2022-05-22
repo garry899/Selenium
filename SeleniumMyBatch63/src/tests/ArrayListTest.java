@@ -23,8 +23,12 @@ public class ArrayListTest {
 		
 		System.out.println("----------------------------------------");
 		
-		for(int i=0; i<tools.size(); i++) {
-			System.out.println(tools.get(i));
+		/*
+		 * for(int i=0; i<tools.size(); i++) { System.out.println(tools.get(i)); }
+		 */
+		
+		for(String s:tools) {
+			System.out.println(s);
 		}
 		
 		tools.add("TestLink");
