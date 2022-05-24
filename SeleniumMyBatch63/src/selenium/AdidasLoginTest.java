@@ -1,8 +1,6 @@
 package selenium;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class AdidasLoginTest {
@@ -16,15 +14,15 @@ public class AdidasLoginTest {
 
 		driver.findElement(By.xpath("//input[@id='login-email']")).sendKeys("easrfd@gmail.com");
 		driver.findElement(By.xpath("//input[@id='login-password']")).sendKeys("defvewedwfv");
-
 		Thread.sleep(2000);
+		
 		driver.findElement(By.xpath("//button[@data-auto-id='login-form-login']")).click();
 		Thread.sleep(4000);
 		
 		String expectedErrMsg = "Incorrect Message";
 		String actualErrMsg = driver.findElement(By.xpath("//div[@data-auto-id='login-error-message']")).getText();;
 		if(actualErrMsg.equals(actualErrMsg)) {
-			System.out.println("pass");
+			System.out.println("Pass");
 		}else {
 			System.out.println("Fail");
 		}
