@@ -60,7 +60,8 @@ public class FrameTest {
 			System.out.println("Element not Present");
 		}
 		
-		System.out.println("------------------Switching to main page");
+		System.out.println("----------------------------------------------------------------Switching to main page");
+		
 		driver.switchTo().defaultContent();//take you to the main page
 		
 		sortable = driver.findElements(By.linkText("Sortable"));

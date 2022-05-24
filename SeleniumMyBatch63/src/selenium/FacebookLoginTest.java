@@ -9,7 +9,6 @@ public class FacebookLoginTest {
 		
 		System.setProperty("webdriver.gecko.driver", "/Users/gurindersingh/Selenium/SeleniumJars/geckodriver");
 		FirefoxDriver driver = new FirefoxDriver();
-		
 		driver.get("https://www.facebook.com/");
 		
 		//1.className  - not working
