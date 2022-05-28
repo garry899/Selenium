@@ -16,14 +16,13 @@ public class NikeTest {
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://www.nike.com/ca/");
 		
-		List<WebElement> nike = driver.findElements(By.xpath("(//div[@class='pre-menu-column pt4-sm ta-sm-l va-sm-t ncss-col-sm-2'])[7]/a"));
-		System.out.println(nike.size());
-		
-		WebElement men = driver.findElement(By.linkText("Men"));
+		WebElement men = driver.findElement(By.linkText("Women"));
 		Actions builder = new Actions(driver);
 		builder.moveToElement(men).build().perform();//to hover mouse to element
 		
-		for(WebElement a :nike) { 
+		List<WebElement> all = driver.findElements(By.xpath("//a[contains(@aria-label,'main-menu, Women, Clothing')]"));
+		System.out.println(all.size());
+		for(WebElement a :all) { 
 			System.out.println(a.getText()); 
 			}
 		
