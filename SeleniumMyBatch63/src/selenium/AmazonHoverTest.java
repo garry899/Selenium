@@ -18,8 +18,10 @@ public class AmazonHoverTest {
 		
 		//hover on account and list
 		WebElement hover = driver.findElement(By.className("nav-line-1-container"));
+		
 		Actions builder = new Actions(driver);
 		builder.moveToElement(hover).build().perform();//to hover mouse to element
+		
 		Thread.sleep(2000);;
 		
 		List<WebElement> yourList = driver.findElements(By.xpath("//div[@id='nav-al-wishlist']/a"));
