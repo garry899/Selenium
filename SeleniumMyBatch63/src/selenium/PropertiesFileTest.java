@@ -33,7 +33,6 @@ public class PropertiesFileTest {
 			driver = new SafariDriver();
 		}
 
- 
 		driver.get("https://www.facebook.com/"); //Open Facebook
 		driver.findElement(By.id("email")).sendKeys("sdgsfgdrthdfgdsfahgsdagsdy"); //Type wrong email
 		driver.findElement(By.id("pass")).sendKeys("sdgdgsdfhxfgxhtjdfh");//Type wrong pass
