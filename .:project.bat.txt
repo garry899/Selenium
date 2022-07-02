@@ -1,0 +1,3 @@
+export PATH="/usr/local/apache-maven-3.8.5/bin:"$PATH
+cd /Users/gurindersingh/Selenium/Selenium_WorkSpace/TestNGExamplesMaven/
+mvn compile test

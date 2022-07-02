@@ -2,6 +2,7 @@ package selenium;
 
 import java.time.Duration;
 
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -28,6 +29,7 @@ public class ExplicitWaitTest {
 		System.out.println(al.getText());
 		
 		wait.until(ExpectedConditions.alertIsPresent());
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='text']")));
 		//Javascript alert
 		al.accept();//click on only button
 		//al.dismiss();//to click on cancel button
